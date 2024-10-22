@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>redirecting</title>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('redirected_from', window.location.protocol + "//" + (window.location.host || window.location.hostname));
+        window.location.replace("http://localhost:9000/redirect?" + urlParams)
+    </script>
+</head>
+</html>
