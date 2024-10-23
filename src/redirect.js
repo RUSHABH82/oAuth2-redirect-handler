@@ -4,7 +4,7 @@ loadingOverlay.className = "loading-overlay";
 const baseUrl = getContextUrl();
 if (window.location.pathname === "/redirect") {
   const urlParams = new URLSearchParams(window.location.search);
-  urlParams.set("redirected_from", baseUrl);
+  urlParams.set("redirected_from", baseUrl+"/redirect");
   const redirectUrl = "http://localhost:9000/redirect?" + urlParams.toString();
 
 
