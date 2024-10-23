@@ -6,8 +6,6 @@ if (window.location.pathname === "/redirect") {
   const urlParams = new URLSearchParams(window.location.search);
   urlParams.set("redirected_from", baseUrl+"/redirect");
   const redirectUrl = "http://localhost:9000/redirect?" + urlParams.toString();
-
-
  
   loadingOverlay.innerHTML = `
         <div class="spinner"></div>
@@ -18,7 +16,7 @@ if (window.location.pathname === "/redirect") {
 
   setTimeout(() => {
     window.location.replace(redirectUrl);
-  }, 200);
+  }, 1000);
 } else {
   document.querySelector("#app").innerHTML = `
         <div class="home-content">
