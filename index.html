@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>redirecting</title>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        urlParams.set('redirected_from', window.location.protocol + "//" + (window.location.host || window.location.hostname));
-        window.location.replace("http://localhost:9000/redirect?" + urlParams)
-    </script>
-</head>
+<html lang="en">
+  <head>
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="spinner"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
